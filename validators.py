@@ -53,3 +53,12 @@ def _check_bounded_integer(value, description, minimum, maximum):
         raise ValueError("Your input", value, "is not part of the valid integer list. Please try again.")
 
     return value
+
+def input_string(prompt):
+
+    value = input(prompt)
+
+    if value == "q" or value == "Q":
+        print("Choose again:")
+        return None
+    return value
